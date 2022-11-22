@@ -8,7 +8,8 @@ function App() {
   return (
     <>
         <RouterProvider  router={routes} />
-        <FloatingWhatsApp phoneNumber="03155591241" />
+        <FloatingWhatsApp accountName="Al Rehman Tutoring" phoneNumber="03315154125" />
+        
     </>
   );
 }
