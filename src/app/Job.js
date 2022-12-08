@@ -2,7 +2,8 @@ import React from 'react'
 import { useFormik } from "formik";
 // import { message } from "antd";
 import axios from 'axios';
-const Contact = () => {
+
+const Job = () => {
 
 
      //Handler for submit button
@@ -28,7 +29,7 @@ const Contact = () => {
     <div>
 
 
-
+{/*<!-- /header -->*/}
 {/*<!-- Modal -->*/}
 <div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
@@ -162,12 +163,8 @@ const Contact = () => {
 {/*<!-- /contact -->*/}
 
 
-
-
-
-
     </div>
   )
 }
 
-export default Contact
+export default Job
