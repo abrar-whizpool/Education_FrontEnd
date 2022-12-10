@@ -69,7 +69,7 @@ const Courses = () => {
 </div>
 
 {/*<!-- page title -->*/}
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+<section class="page-title-section overlay" data-background="/source/images/backgrounds/page-title.jpg">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -92,7 +92,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-1.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-1.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -110,7 +110,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-2.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-2.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -128,7 +128,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-3.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-3.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -146,7 +146,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-4.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-4.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -164,7 +164,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-5.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-5.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -182,7 +182,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-6.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-6.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -204,7 +204,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-1.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-1.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -222,7 +222,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-2.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-2.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -240,7 +240,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-3.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-3.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -258,7 +258,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-4.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-4.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -276,7 +276,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-5.jpg" alt="course thumb"/>
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-5.jpg" alt="course thumb"/>
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>
@@ -294,7 +294,7 @@ const Courses = () => {
   {/*<!-- course item -->*/}
   <div class="col-lg-4 col-sm-6 mb-5">
     <div class="card p-0 border-primary rounded-0 hover-shadow">
-      <img class="card-img-top rounded-0" src="images/courses/course-6.jpg" alt="course thumb" />
+      <img class="card-img-top rounded-0" src="/source/images/courses/course-6.jpg" alt="course thumb" />
       <div class="card-body">
         <ul class="list-inline mb-2">
           <li class="list-inline-item"><i class="ti-calendar mr-1 text-color"></i>02-14-2018</li>

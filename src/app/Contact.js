@@ -9,7 +9,9 @@ const Contact = () => {
   const ContacUsHandler = async (values) => {
     console.log("SubmitHandler", values);
     try {
-        const respone = await axios.post('http://localhost:5000/send',values)
+        const respone = await axios.post('http://localhost:5000/send',{
+          ...values, emailType:'contact'
+          })
         console.log("respone",respone)
     } catch (error) {
             console.log("error",error)

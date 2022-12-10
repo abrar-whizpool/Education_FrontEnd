@@ -10,7 +10,9 @@ const Job = () => {
   const ContacUsHandler = async (values) => {
     console.log("SubmitHandler", values);
     try {
-        const respone = await axios.post('http://localhost:5000/send',values)
+        const respone = await axios.post('http://localhost:5000/send',{
+        ...values, emailType:'job'
+        })
         console.log("respone",respone)
     } catch (error) {
             console.log("error",error)
@@ -20,7 +22,7 @@ const Job = () => {
 
     //formMik Handler
     const formMik = useFormik({
-        initialValues: { name:"",email: "", subject: "",message: "" },
+        initialValues: { name:"",email: "", applicationTitle: "",coverLetter: "" },
         // validationSchema: LoginSchema,
         onSubmit: ContacUsHandler,
       });
@@ -101,7 +103,7 @@ const Job = () => {
       <div class="col-md-8">
         <ul class="list-inline custom-breadcrumb mb-2">
           <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="#!">Home</a></li>
-          <li class="list-inline-item text-white h3 font-secondary nasted">Contact Us</li>
+          <li class="list-inline-item text-white h3 font-secondary nasted">Jobs</li>
         </ul>
         <p class="text-lighten mb-0">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.</p>
       </div>
@@ -115,7 +117,7 @@ const Job = () => {
   <div class="container">
     <div class="row">
       <div class="col-lg-12">
-        <h2 class="section-title">Contact Us</h2>
+        <h2 class="section-title">Apply For Job</h2>
       </div>
     </div>
     <div class="row">
@@ -133,20 +135,20 @@ const Job = () => {
              value={formMik.values.email}
            name="email" placeholder="Your Email" required/>
 
-          <input type="text" class="form-control mb-3" id="subject" 
+          <input type="text" class="form-control mb-3" id="applicationTitle" 
              onChange={formMik.handleChange}
              onBlur={formMik.handleBlur}
-             value={formMik.values.subject}
-          name="subject" placeholder="Subject" required/>
+             value={formMik.values.applicationTitle}
+          name="applicationTitle" placeholder="Application Title" required/>
 
 
-          <textarea name="message" id="message" class="form-control mb-3" 
+          <textarea name="coverLetter" id="coverLetter" class="form-control mb-3" 
              onChange={formMik.handleChange}
              onBlur={formMik.handleBlur}
-             value={formMik.values.message}
+             value={formMik.values.coverLetter}
 
-          placeholder="Your Message" required></textarea>
-          <button type="submit" value="send" class="btn btn-primary">SEND MESSAGE</button>
+          placeholder="Cover Letter" required></textarea>
+          <button type="submit" value="send" class="btn btn-primary">APPLY FOR JOB</button>
         </form>
       </div>
 

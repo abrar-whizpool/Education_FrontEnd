@@ -68,7 +68,7 @@ const About = () => {
 </div>
 
 {/*<!-- page title -->*/}
-<section class="page-title-section overlay" data-background="images/backgrounds/page-title.jpg">
+<section class="page-title-section overlay" data-background="/source/images/backgrounds/page-title.jpg">
   <div class="container">
     <div class="row">
       <div class="col-md-8">
@@ -88,7 +88,7 @@ const About = () => {
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <img class="img-fluid w-100 mb-4" src="images/about/about-page.jpg" alt="about image" />
+        <img class="img-fluid w-100 mb-4" src="/source/images/about/about-page.jpg" alt="about image" />
         <h2 class="section-title">ABOUT OUR JOURNY</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
         <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
@@ -136,7 +136,7 @@ const About = () => {
 {/*<!-- /funfacts -->*/}
 
 {/*<!-- success story -->*/}
-<section class="section bg-cover" data-background="images/backgrounds/success-story.jpg">
+<section class="section bg-cover" data-background="/source/images/backgrounds/success-story.jpg">
   <div class="container">
     <div class="row">
       <div class="col-lg-6 col-sm-4 position-relative success-video">
@@ -166,7 +166,7 @@ const About = () => {
         {/*<!-- teacher -->*/}
         <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
           <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-1.jpg" alt="teacher" />
+            <img class="card-img-top rounded-0" src="/source/images/teachers/teacher-1.jpg" alt="teacher" />
             <div class="card-body">
               <a href="teacher-single.html">
                 <h4 class="card-title">Jacke Masito</h4>
@@ -186,7 +186,7 @@ const About = () => {
         {/*<!-- teacher -->*/}
         <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
           <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-2.jpg" alt="teacher" />
+            <img class="card-img-top rounded-0" src="/source/images/teachers/teacher-2.jpg" alt="teacher" />
             <div class="card-body">
               <a href="teacher-single.html">
                 <h4 class="card-title">Clark Malik</h4>
@@ -206,7 +206,7 @@ const About = () => {
         {/*<!-- teacher -->*/}
         <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
           <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="images/teachers/teacher-3.jpg" alt="teacher" />
+            <img class="card-img-top rounded-0" src="/source/images/teachers/teacher-3.jpg" alt="teacher" />
             <div class="card-body">
               <a href="teacher-single.html">
                 <h4 class="card-title">John Doe</h4>

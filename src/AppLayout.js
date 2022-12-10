@@ -5,6 +5,11 @@ import Footer from "./app/components/Footer";
 const AppLayout = () => {
   return (
     <div>
+        {/* <!-- preloader start --> */}
+  <div class="preloader">
+    <img src="/source/images/preloader.gif" alt="preloader" />
+  </div>
+  {/* <!-- preloader end --> */}
          <Header />
         <Outlet />
         <Footer />
