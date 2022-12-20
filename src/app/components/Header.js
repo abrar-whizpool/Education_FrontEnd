@@ -1,90 +1,319 @@
-import React from 'react'
+import React from "react";
 import { Link } from "react-router-dom";
-
+import { PhoneNumber, Title } from "../../common/constants";
+import { shallowEqual, useDispatch, useSelector } from "react-redux";
+// import { cartSlice } from "../redux/cart/cartReducer";
+import { cartSlice } from "../../redux/cart/cartReducer";
 
 const Header = () => {
+
+	// const { actions } = cartSlice;
+	// const dispatch = useDispatch();
+	const { entity } = useSelector(
+	  (state) => ({ entity: state.cart.entity }),
+	  shallowEqual
+	);
+	const { actions } = cartSlice;
+	const dispatch = useDispatch();
+	  console.log("entity",entity)
+
   return (
     <div>
+      {/*{/*<!-- header -->*/}
+      {/*<!-- Start Top Header Bar -->*/}
+<section class="top-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 col-xs-12 col-sm-4">
+				<div class="contact-number">
+					<i class="tf-ion-ios-telephone"></i>
+					<span>{PhoneNumber}</span>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-12 col-sm-4">
+				{/*<!-- Site Logo -->*/}
+				<div class="logo text-center">
+					<h2>
+						{/*<!-- replace logo here -->*/}
+						{/* <svg width="135px" height="29px" viewBox="0 0 155 29" version="1.1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink">
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" font-size="40"
+								font-family="AustinBold, Austin" font-weight="bold">
+								<g id="Group" transform="translate(-108.000000, -297.000000)" fill="#000000">
+									<text id="AVIATO">
+										<tspan x="108.94" y="325">AVIATO</tspan>
+									</text>
+								</g>
+							</g>
+						</svg> */}
+						{Title}
+					</h2>
+				</div>
+			</div>
+			<div class="col-md-4 col-xs-12 col-sm-4">
+				{/*<!-- Cart -->*/}
+				
+				<ul class="top-menu text-right list-inline">
+				
+					<li class="dropdown cart-nav dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
+								class="tf-ion-android-cart"></i>Cart</a>
+						<div class="dropdown-menu cart-dropdown">
+						{entity?.length ? entity.map(item=>{
+					return(<>
+					<div class="media">
+								<a class="pull-left" href="#!">
+									<img class="media-object" src={item.image} alt="image" />
+								</a>
+								<div class="media-body">
+									<h4 class="media-heading"><a href="#!">{item?.name}</a></h4>
+									<div class="cart-price">
+										<span>{item?.qty} x</span>
+										<span>{item?.price}</span>
+									</div>
+									<h5><strong>{item?.price}</strong></h5>
+								</div>
+								<a onClick={()=>{
+									dispatch(actions.removeFromCart({entity:item}))
+								}} class="remove"><i class="tf-ion-close"></i></a>
+							</div>
+					
+					</>)
+				})
 
-     {/*<!-- header -->*/}
-<header class="fixed-top header">
-  {/*<!-- top header -->*/}
-  <div class="top-header py-2 bg-white">
-    <div class="container">
-      <div class="row no-gutters">
-        <div class="col-lg-4 text-center text-lg-left">
-          <a class="text-color mr-3" href="tel:+443003030266"><strong>CALL</strong> +44 300 303 0266</a>
-          <ul class="list-inline d-inline">
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#!"><i class="ti-facebook"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#!"><i class="ti-twitter-alt"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#!"><i class="ti-github"></i></a></li>
-            <li class="list-inline-item mx-0"><a class="d-inline-block p-2 text-color" href="#!"><i class="ti-instagram"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-lg-8 text-center text-lg-right">
-          <ul class="list-inline">
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#!">notice</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#!">research</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#!">SCHOLARSHIP</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#!" data-toggle="modal" data-target="#loginModal">login</a></li>
-            <li class="list-inline-item"><a class="text-uppercase text-color p-sm-2 py-2 px-0 d-inline-block" href="#!" data-toggle="modal" data-target="#signupModal">register</a></li>
-          </ul>
-        </div>
-      </div>
+				:(<>
+				No Item
+				</>)}
+
+							<div class="cart-summary">
+								<span>Total</span>
+								<span class="total-price">$1799.00</span>
+							</div>
+							<ul class="text-center cart-buttons">
+								<li>
+								<Link to='/cart'>
+									<a  class="btn btn-small">View Cart</a>
+									</Link>
+									</li>
+								<li>
+								<Link to='/checkout'>
+									<a  class="btn btn-small btn-solid-border">Checkout</a>
+									</Link>
+									</li>
+							</ul>
+						</div>
+
+					</li>{/*<!-- / Cart -->*/}
+
+					{/*<!-- Search -->*/}
+					<li class="dropdown search dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"><i
+								class="tf-ion-ios-search-strong"></i> Search</a>
+						<ul class="dropdown-menu search-dropdown">
+							<li>
+								<form action="post"><input type="search" class="form-control" placeholder="Search..."/></form>
+							</li>
+						</ul>
+					</li>{/*<!-- / Search -->*/}
+
+					{/*<!-- Languages -->*/}
+					{/* <li class="commonSelect">
+						<select class="form-control">
+							<option>EN</option>
+							<option>DE</option>
+							<option>FR</option>
+							<option>ES</option>
+						</select>
+					</li> */}
+					{/*<!-- / Languages -->*/}
+
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>{/*<!-- End Top Header Bar -->*/}
+
+
+{/*<!-- Main Menu Section -->*/}
+<section class="menu">
+	<nav class="navbar navigation">
+		<div class="container">
+			<div class="navbar-header">
+				<h2 class="menu-title">Main Menu</h2>
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+					aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+			</div>{/*<!-- / .navbar-header -->*/}
+
+			{/*<!-- Navbar Links -->*/}
+			<div id="navbar" class="navbar-collapse collapse text-center">
+				<ul class="nav navbar-nav">
+
+					{/*<!-- Home -->*/}
+
+					
+					<li class="dropdown ">
+					 <Link to='/'>
+						<a style={{color:'black'}}>Home</a>
+						</Link>
+					</li>
+
+					<li class="dropdown ">
+					 <Link to='/about'>
+						<a style={{color:'black'}}>About</a>
+						</Link>
+					</li>
+
+					<li class="dropdown ">
+					 <Link to='/contact'>
+						<a style={{color:'black'}}>Contact</a>
+						</Link>
+					</li>
+					
+
+				
+
+
+					{/*<!-- Elements -->*/}
+					{/* <li class="dropdown dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+							role="button" aria-haspopup="true" aria-expanded="false">Shop <span
+								class="tf-ion-ios-arrow-down"></span></a>
+						<div class="dropdown-menu">
+							<div class="row">
+
+							
+								<div class="col-lg-6 col-md-6 mb-sm-3">
+									<ul>
+										<li class="dropdown-header">Pages</li>
+										<li role="separator" class="divider"></li>
+										<li><a href="shop.html">Shop</a></li>
+										<li><a href="checkout.html">Checkout</a></li>
+										<li><a href="cart.html">Cart</a></li>
+										<li><a href="pricing.html">Pricing</a></li>
+										<li><a href="confirmation.html">Confirmation</a></li>
+
+									</ul>
+								</div>
+
+							
+								<div class="col-lg-6 col-md-6 mb-sm-3">
+									<ul>
+										<li class="dropdown-header">Layout</li>
+										<li role="separator" class="divider"></li>
+										<li><a href="product-single.html">Product Details</a></li>
+										<li><a href="shop-sidebar.html">Shop With Sidebar</a></li>
+
+									</ul>
+								</div>
+
+							</div>
+						</div>
+						
+					</li> */}
+					{/*<!-- / Elements -->*/}
+
+
+					{/*<!-- Pages -->*/}
+					{/* <li class="dropdown full-width dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+							role="button" aria-haspopup="true" aria-expanded="false">Pages <span
+								class="tf-ion-ios-arrow-down"></span></a>
+						<div class="dropdown-menu">
+							<div class="row">
+
+						
+								<div class="col-sm-3 col-xs-12">
+									<ul>
+										<li class="dropdown-header">Introduction</li>
+										<li role="separator" class="divider"></li>
+										<li><a href="contact.html">Contact Us</a></li>
+										<li><a href="about.html">About Us</a></li>
+										<li><a href="404.html">404 Page</a></li>
+										<li><a href="coming-soon.html">Coming Soon</a></li>
+										<li><a href="faq.html">FAQ</a></li>
+									</ul>
+								</div>
+
+							
+								<div class="col-sm-3 col-xs-12">
+									<ul>
+										<li class="dropdown-header">Dashboard</li>
+										<li role="separator" class="divider"></li>
+										<li><a href="dashboard.html">User Interface</a></li>
+										<li><a href="order.html">Orders</a></li>
+										<li><a href="address.html">Address</a></li>
+										<li><a href="profile-details.html">Profile Details</a></li>
+									</ul>
+								</div>
+
+						
+								<div class="col-sm-3 col-xs-12">
+									<ul>
+										<li class="dropdown-header">Utility</li>
+										<li role="separator" class="divider"></li>
+										<li><a href="login.html">Login Page</a></li>
+										<li><a href="signin.html">Signin Page</a></li>
+										<li><a href="forget-password.html">Forget Password</a></li>
+									</ul>
+								</div>
+
+							
+								<div class="col-sm-3 col-xs-12">
+									<a href="shop.html">
+										<img class="img-responsive" src="source/images/shop/header-img.jpg" alt="menu image" />
+									</a>
+								</div>
+							</div>
+						</div>
+					</li> */}
+					{/*<!-- / Pages -->*/}
+
+
+
+					{/*<!-- Blog -->*/}
+					{/* <li class="dropdown dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+							role="button" aria-haspopup="true" aria-expanded="false">Blog <span
+								class="tf-ion-ios-arrow-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="blog-left-sidebar.html">Blog Left Sidebar</a></li>
+							<li><a href="blog-right-sidebar.html">Blog Right Sidebar</a></li>
+							<li><a href="blog-full-width.html">Blog Full Width</a></li>
+							<li><a href="blog-grid.html">Blog 2 Columns</a></li>
+							<li><a href="blog-single.html">Blog Single</a></li>
+						</ul>
+					</li> */}
+          {/*<!-- / Blog -->*/}
+
+					{/*<!-- Shop -->*/}
+					{/* <li class="dropdown dropdown-slide">
+						<a href="#!" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="350"
+							role="button" aria-haspopup="true" aria-expanded="false">Elements <span
+								class="tf-ion-ios-arrow-down"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="typography.html">Typography</a></li>
+							<li><a href="buttons.html">Buttons</a></li>
+							<li><a href="alerts.html">Alerts</a></li>
+						</ul>
+					</li> */}
+					
+					{/*<!-- / Blog -->*/}
+				</ul>{/*<!-- / .nav .navbar-nav -->*/}
+
+			</div>
+			{/*<!--/.navbar-collapse -->*/}
+		</div>{/*<!-- / .container -->*/}
+	</nav>
+</section>
+      {/*{/*<!-- /header -->*/}
     </div>
-  </div>
-  {/*<!-- navbar -->*/}
-  <div class="navigation w-100">
-    <div class="container">
-      <nav class="navbar navbar-expand-lg navbar-dark p-0">
-        <a class="navbar-brand" href="index.html"><img src="source/images/logo.png" alt="logo" /></a>
-        <button class="navbar-toggler rounded-0" type="button" data-toggle="collapse" data-target="#navigation"
-          aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+  );
+};
 
-        <div class="collapse navbar-collapse" id="navigation">
-          <ul class="navbar-nav ml-auto text-center">
-          <Link to='/'>
-            <li class="nav-item ">
-              
-              <a class="nav-link">Home</a>
-              
-            </li>
-            </Link>
-
-            <Link to='/about'>
-            <li class="nav-item ">
-              <a class="nav-link">About</a>
-            </li>
-            </Link>
-
-            <Link to='/job'>
-            <li class="nav-item ">
-              <a class="nav-link">Job</a>
-            </li>
-            </Link>
-
-            <Link to='/courses'>
-            <li class="nav-item ">
-              <a class="nav-link">Courses</a>
-            </li>
-            </Link>
-            <Link to='/contact'>
-            <li class="nav-item ">
-              <a class="nav-link">Contact</a>
-            </li>
-            </Link>
-           
-          </ul>
-        </div>
-      </nav>
-    </div>
-  </div>
-</header>
-{/*<!-- /header -->*/}
-    </div>
-  )
-}
-
-export default Header
+export default Header;

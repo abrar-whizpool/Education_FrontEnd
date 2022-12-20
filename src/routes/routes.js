@@ -1,12 +1,13 @@
 
 import { createBrowserRouter } from "react-router-dom";
-import NotFoundError from "../app/NotFoundError";
 import Home from "../app/Home";
-import Contact from "../app/Contact";
-import About from "../app/About";
-import Courses from "../app/Courses";
-import Job from "../app/Job";
+import NotFoundError from "../app/NotFoundError";
 import AppLayout from "../AppLayout";
+import About from "../app/About";
+import Contact from "../app/Contact";
+import Cart from "../app/Cart";
+import Checkout from "../app/Checkout";
+import ProductDetails from "../app/ProductDetails";
 
 
 export const routes = createBrowserRouter([
@@ -26,18 +27,23 @@ export const routes = createBrowserRouter([
         errorElement:<NotFoundError/>,
       },
       {
-        path: "/job",
-        element:<Job/>,
+        path: "/cart",
+        element:<Cart/>,
         errorElement:<NotFoundError/>,
       },
       {
-        path: "/courses",
-        element:<Courses/>,
+        path: "/checkout",
+        element:<Checkout/>,
         errorElement:<NotFoundError/>,
       },
-      {
+       {
         path: "/contact",
         element:<Contact/>,
+        errorElement:<NotFoundError/>,
+      },
+       {
+        path: "/product-details",
+        element:<ProductDetails/>,
         errorElement:<NotFoundError/>,
       },
     ],

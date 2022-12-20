@@ -6,106 +6,92 @@
  */
 
 (function ($) {
-	'use strict';
+  'use strict';
 
-	// Preloader js    
-	$(window).on('load', function () {
-		$('.preloader').fadeOut(700);
-	});
+  // Preloader
+  $(window).on('load', function () {
+    $('#preloader').fadeOut('slow', function () {
+      $(this).remove();
+    });
+  });
 
-	// Sticky Menu
-	$(window).scroll(function () {
-		var height = $('.top-header').innerHeight();
-		if ($('header').offset().top > 10) {
-			$('.top-header').addClass('hide');
-			$('.navigation').addClass('nav-bg');
-			$('.navigation').css('margin-top', '-' + height + 'px');
-		} else {
-			$('.top-header').removeClass('hide');
-			$('.navigation').removeClass('nav-bg');
-			$('.navigation').css('margin-top', '-' + 0 + 'px');
-		}
-	});
-	// navbarDropdown
-	if ($(window).width() < 992) {
-		$('.navigation .dropdown-toggle').on('click', function () {
-			$(this).siblings('.dropdown-menu').animate({
-				height: 'toggle'
-			}, 300);
-		});
-	}
+  
+  // Instagram Feed
+  if (($('#instafeed').length) !== 0) {
+    var accessToken = $('#instafeed').attr('data-accessToken');
+    var userFeed = new Instafeed({
+      get: 'user',
+      resolution: 'low_resolution',
+      accessToken: accessToken,
+      template: '<a href="{{link}}"><img src="{{image}}" alt="instagram-image"></a>'
+    });
+    userFeed.run();
+  }
 
-	// Background-images
-	$('[data-background]').each(function () {
-		$(this).css({
-			'background-image': 'url(' + $(this).data('background') + ')'
-		});
-	});
-
-	//Hero Slider
-	$('.hero-slider').slick({
-		autoplay: true,
-		autoplaySpeed: 7500,
-		pauseOnFocus: false,
-		pauseOnHover: false,
-		infinite: true,
-		arrows: true,
-		fade: true,
-		prevArrow: '<button type=\'button\' class=\'prevArrow\'><i class=\'ti-angle-left\'></i></button>',
-		nextArrow: '<button type=\'button\' class=\'nextArrow\'><i class=\'ti-angle-right\'></i></button>',
-		dots: true
-	});
-	$('.hero-slider').slickAnimation();
-
-	// venobox popup
-	$(document).ready(function () {
-		$('.venobox').venobox();
-	});
+  setTimeout(function () {
+    $('.instagram-slider').slick({
+      dots: false,
+      speed: 300,
+      // autoplay: true,
+      arrows: false,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      responsive: [{
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 600,
+          settings: {
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 2
+          }
+        }
+      ]
+    });
+  }, 1500);
 
 
-	// filter
-	$(document).ready(function () {
-		var containerEl = document.querySelector('.filtr-container');
-		var filterizd;
-		if (containerEl) {
-			filterizd = $('.filtr-container').filterizr({});
-		}
-		//Active changer
-		$('.filter-controls li').on('click', function () {
-			$('.filter-controls li').removeClass('active');
-			$(this).addClass('active');
-		});
-	});
+  // e-commerce touchspin
+  $('input[name=\'product-quantity\']').TouchSpin();
 
-	//  Count Up
-	function counter() {
-		var oTop;
-		if ($('.count').length !== 0) {
-			oTop = $('.count').offset().top - window.innerHeight;
-		}
-		if ($(window).scrollTop() > oTop) {
-			$('.count').each(function () {
-				var $this = $(this),
-					countTo = $this.attr('data-count');
-				$({
-					countNum: $this.text()
-				}).animate({
-					countNum: countTo
-				}, {
-					duration: 1000,
-					easing: 'swing',
-					step: function () {
-						$this.text(Math.floor(this.countNum));
-					},
-					complete: function () {
-						$this.text(this.countNum);
-					}
-				});
-			});
-		}
-	}
-	$(window).on('scroll', function () {
-		counter();
-	});
+
+  // Video Lightbox
+  $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+    event.preventDefault();
+    $(this).ekkoLightbox();
+  });
+
+
+  // Count Down JS
+  $('#simple-timer').syotimer({
+    year: 2022,
+    month: 5,
+    day: 9,
+    hour: 20,
+    minute: 30
+  });
+
+  //Hero Slider
+  $('.hero-slider').slick({
+    // autoplay: true,
+    infinite: true,
+    arrows: true,
+    prevArrow: '<button type=\'button\' class=\'heroSliderArrow prevArrow tf-ion-chevron-left\'></button>',
+    nextArrow: '<button type=\'button\' class=\'heroSliderArrow nextArrow tf-ion-chevron-right\'></button>',
+    dots: true,
+    autoplaySpeed: 7000,
+    pauseOnFocus: false,
+    pauseOnHover: false
+  });
+  $('.hero-slider').slickAnimation();
+
 
 })(jQuery);

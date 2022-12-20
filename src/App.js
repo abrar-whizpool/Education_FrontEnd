@@ -1,31 +1,32 @@
 import React from "react";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { RouterProvider } from "react-router-dom";
 import "./App.style.css";
 import { routes } from "./routes/routes";
-import { FloatingWhatsApp } from "react-floating-whatsapp";
-import Header from "./app/components/Header";
-import Footer from "./app/components/Footer";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useRoutes,
-} from "react-router-dom";
+import { persistStore } from 'redux-persist';
+import { PersistGate } from 'redux-persist/integration/react';
+import * as _redux from "./redux";
+import store from "./redux/store";
+import axios from "axios";
+import { Provider } from "react-redux";
+import { PhoneNumber, Title } from "./common/constants";
+
+let persistor = persistStore(store);
+
 function App() {
+  // _redux.setupAxios(axios, store);
+
   return (
     <>
-      {/* <!-- preloader start --> */}
-      {/* <div class="preloader">
-        <img src="/source/images/preloader.gif" alt="preloader" />
-      </div> */}
-      {/* <!-- preloader end --> */}
-      {/* <Header /> */}
+   <Provider store={store}>
+      <PersistGate persistor={persistor}>
       <RouterProvider router={routes} />
-      <FloatingWhatsApp
-        accountName="Al Rehman Tutoring"
-        phoneNumber="03315154125"
-      />
-      {/* <Footer /> */}
+      {/* <FloatingWhatsApp
+        accountName={Title}
+        phoneNumber={PhoneNumber}
+      /> */}
+       </PersistGate>
+      </Provider>
     </>
   );
 }

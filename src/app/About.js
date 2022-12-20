@@ -3,233 +3,104 @@ import React from 'react'
 const About = () => {
   return (
     <div>
-      {/*<!-- Modal -->*/}
-<div class="modal fade" id="signupModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content rounded-0 border-0 p-4">
-            <div class="modal-header border-0">
-                <h3>Register</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <div class="login">
-                    <form action="#" class="row">
-                        <div class="col-12">
-                            <input type="text" class="form-control mb-3" id="signupPhone" name="signupPhone" placeholder="Phone" />
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control mb-3" id="signupName" name="signupName" placeholder="Name" />
-                        </div>
-                        <div class="col-12">
-                            <input type="email" class="form-control mb-3" id="signupEmail" name="signupEmail" placeholder="Email" />
-                        </div>
-                        <div class="col-12">
-                            <input type="password" class="form-control mb-3" id="signupPassword" name="signupPassword" placeholder="Password" />
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">SIGN UP</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+      <section class="page-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<div class="content">
+					<h1 class="page-name">About Us</h1>
+					<ol class="breadcrumb">
+						<li><a href="index.html">Home</a></li>
+						<li class="active">about us</li>
+					</ol>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img class="img-responsive" src="source/images/about/about.jpg"/>
+			</div>
+			<div class="col-md-6">
+				<h2 class="mt-40">About Our Shop</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam iure officiis facere vitae itaque.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
+				<a href="contact.html" class="btn btn-main mt-20">Download Company Profile</a>
+			</div>
+		</div>
+		<div class="row mt-40">
+			<div class="col-md-3 text-center">
+				<img src="source/images/about/awards-logo.png"/>
+			</div>
+			<div class="col-md-3 text-center">
+				<img src="source/images/about/awards-logo.png"/>
+			</div>
+			<div class="col-md-3 text-center">
+				<img src="source/images/about/awards-logo.png"/>
+			</div>
+			<div class="col-md-3 text-center">
+				<img src="source/images/about/awards-logo.png"/>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="team-members ">
+	<div class="container">
+		<div class="row">
+			<div class="title"><h2>Team Members</h2></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="source/images/team/team-1.jpg"/>
+					<h4>Jonathon Andrew</h4>
+					<p>Founder</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="source/images/team/team-2.jpg"/>
+					<h4>Adipisci Velit</h4>
+					<p>Developer</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="source/images/team/team-3.jpg"/>
+					<h4>John Fexit</h4>
+					<p>Shop Manager</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="source/images/team/team-1.jpg"/>
+					<h4>John Fexit</h4>
+					<p>Shop Manager</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class="section video-testimonial bg-1 overly-white text-center mt-50">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<h2>Video presentation</h2>
+				<a class="play-icon" href="https://www.youtube.com/watch?v=oyEuk8j8imI&amp;rel=0" data-toggle="lightbox">
+					<i class="tf-ion-ios-play"></i>
+				</a>
+			</div>
+		</div>
+	</div>
 </div>
-{/*<!-- Modal -->*/}
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content rounded-0 border-0 p-4">
-            <div class="modal-header border-0">
-                <h3>Login</h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <form action="#" class="row">
-                    <div class="col-12">
-                        <input type="text" class="form-control mb-3" id="loginPhone" name="loginPhone" placeholder="Phone" />
-                    </div>
-                    <div class="col-12">
-                        <input type="text" class="form-control mb-3" id="loginName" name="loginName" placeholder="Name" />
-                    </div>
-                    <div class="col-12">
-                        <input type="password" class="form-control mb-3" id="loginPassword" name="loginPassword" placeholder="Password" />
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-primary">LOGIN</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-{/*<!-- page title -->*/}
-<section class="page-title-section overlay" data-background="/source/images/backgrounds/page-title.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-8">
-        <ul class="list-inline custom-breadcrumb mb-2">
-          <li class="list-inline-item"><a class="h2 text-primary font-secondary" href="index.html">Home</a></li>
-          <li class="list-inline-item text-white h3 font-secondary nasted">About Us</li>
-        </ul>
-        <p class="text-lighten mb-0">Our courses offer a good compromise between the continuous assessment favoured by some universities and the emphasis placed on final exams by others.</p>
-      </div>
-    </div>
-  </div>
-</section>
-{/*<!-- /page title -->*/}
-
-{/*<!-- about -->*/}
-<section class="section">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <img class="img-fluid w-100 mb-4" src="/source/images/about/about-page.jpg" alt="about image" />
-        <h2 class="section-title">ABOUT OUR JOURNY</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et.dolore magna aliqua. Ut enim ad minim veniam, quis nostrud. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe ipsa illo quod veritatis, magni debitis fugiat dolore voluptates! Consequatur, aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat perferendis sint optio similique. Et amet magni facilis vero corporis quos.</p>
-        <p>exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum a, facere fugit error accusamus est officiis vero in, nostrum laboriosam corrupti explicabo, cumque repudiandae deleniti perspiciatis quae consectetur enim. Laboriosam!</p>
-      </div>
-    </div>
-  </div>
-</section>
-{/*<!-- /about -->*/}
-
-{/*<!-- funfacts -->*/}
-<section class="section-sm bg-primary">
-  <div class="container">
-    <div class="row">
-      {/*<!-- funfacts item -->*/}
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="60">0</h2>
-          <h5 class="text-white">TEACHERS</h5>
-        </div>
-      </div>
-      {/*<!-- funfacts item -->*/}
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="50">0</h2>
-          <h5 class="text-white">COURSES</h5>
-        </div>
-      </div>
-      {/*<!-- funfacts item -->*/}
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="1000">0</h2>
-          <h5 class="text-white">STUDENTS</h5>
-        </div>
-      </div>
-      {/*<!-- funfacts item -->*/}
-      <div class="col-md-3 col-sm-6 mb-4 mb-md-0">
-        <div class="text-center">
-          <h2 class="count text-white" data-count="3737">0</h2>
-          <h5 class="text-white">SATISFIED CLIENT</h5>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{/*<!-- /funfacts -->*/}
-
-{/*<!-- success story -->*/}
-<section class="section bg-cover" data-background="/source/images/backgrounds/success-story.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 col-sm-4 position-relative success-video">
-        <a class="play-btn venobox" href="https://youtu.be/nA1Aqp0sPQo" data-vbtype="video">
-          <i class="ti-control-play"></i>
-        </a>
-      </div>
-      <div class="col-lg-6 col-sm-8">
-        <div class="bg-white p-5">
-          <h2 class="section-title">Success Stories</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat.</p>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-{/*<!-- /success story -->*/}
-
-{/*<!-- teachers -->*/}
-<section class="section">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12">
-          <h2 class="section-title">Our Teachers</h2>
-        </div>
-        {/*<!-- teacher -->*/}
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="/source/images/teachers/teacher-1.jpg" alt="teacher" />
-            <div class="card-body">
-              <a href="teacher-single.html">
-                <h4 class="card-title">Jacke Masito</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*<!-- teacher -->*/}
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="/source/images/teachers/teacher-2.jpg" alt="teacher" />
-            <div class="card-body">
-              <a href="teacher-single.html">
-                <h4 class="card-title">Clark Malik</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/*<!-- teacher -->*/}
-        <div class="col-lg-4 col-sm-6 mb-5 mb-lg-0">
-          <div class="card border-0 rounded-0 hover-shadow">
-            <img class="card-img-top rounded-0" src="/source/images/teachers/teacher-3.jpg" alt="teacher" />
-            <div class="card-body">
-              <a href="teacher-single.html">
-                <h4 class="card-title">John Doe</h4>
-              </a>
-              <div class="d-flex justify-content-between">
-                <span>Teacher</span>
-                <ul class="list-inline">
-                  <li class="list-inline-item"><a class="text-color" href="https://facebook.com/themefisher"><i class="ti-facebook"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://twitter.com/themefisher"><i class="ti-twitter-alt"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://github.com/themefisher"><i class="ti-google"></i></a></li>
-                  <li class="list-inline-item"><a class="text-color" href="https://instagram.com/themefisher/"><i class="ti-linkedin"></i></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  {/*<!-- /teachers -->*/}
-
-
-    </div>
+   </div>
   )
 }
 

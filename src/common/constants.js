@@ -1,0 +1,8 @@
+export const Title = 'SilaiHut & Boutique'
+export const PhoneNumber = '+92-336-0022345'
+export const Facebook = 'https://www.facebook.com/SilaiHutAndBoutique'
+export const WhatsApp = '03360022345'
+export const Instagram = 'https://instagram.com/silaihut_and_boutique'
+export const Email = 'test@gmail.com'
+export const Youtube = 'https://youtube.com/@silaihutboutique2297'
+export const Address = 'Shop#10, Basement Zaraj Plaza, Gulraiz Housing Society Commercial Area, Rawalpindi'
